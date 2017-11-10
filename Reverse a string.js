@@ -1,9 +1,8 @@
+//jshint esversion: 6
 function reverseString(str) {
-  var array = str.split("");
-  var reverse= array.reverse();
-  var connect = reverse.join("");
-  return connect;
+  const newStr = str.split('').reverse().join('');
+  return newStr;
 }
 
-console.log(reverseString("This really works!"));
+reverseString("hello");
 
