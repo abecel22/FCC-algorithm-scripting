@@ -1,14 +1,13 @@
-
-
+//jshint esversion: 6
 function factorialize(num) {
-
-  var factor = 1;
-
-  while (num >1){
-    factor *= num;
-    num--;
+  if(num === 0) {
+      return 1;
+    } else {
+  for(let i= num-1; i > 0; i--) {  
+       num *= i; 
   }
-
-  return factor;
+       return num;
+    }
 }
-console.log(factorialize(5));
+
+factorialize(5);
