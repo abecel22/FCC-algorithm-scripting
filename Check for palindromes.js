@@ -1,17 +1,11 @@
 
-
+//jshint esversion: 6
 function palindrome(str) {
   // Good luck!
-  var updatedString= str.toLowerCase().trim().replace(/[^a-z0-9]+/gi, '');
-  var arrayForward = str.split("");
-  var arrayBackward = arrayForward.reverse();
-  var newString = arrayBackward.join().toLowerCase().trim().replace(/[^a-z0-9]+/gi, '');
-
-  if (newString === updatedString){
-    return true;
-  } else {
-    return false;
-  }
+  str = str.toLowerCase().replace(/[^a-z0-9]+/gi, '');
+  let newStr = str.split('').reverse().join('');
+ 
+  return newStr === str;
 }
 
-console.log(palindrome("Wow"));
+palindrome("eye");
