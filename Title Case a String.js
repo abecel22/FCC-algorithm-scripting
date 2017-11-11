@@ -1,12 +1,8 @@
+//jshint esversion: 6
 
 function titleCase(str) {
-
-	str =str.toLowerCase().split(" ");
-
-for (var i = 0; i< str.length; i++){
-  str[i]= str[i].charAt(0).toUpperCase() + str[i].slice(1);
-}
-return str.join(' ');
+   return str.toLowerCase()
+             .replace(/(^|\s)\S/g, (L) => L.toUpperCase());       
 }
 
-console.log(titleCase("I'm a little tea pot"));
+titleCase("I'm a little tea pot");
