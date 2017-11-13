@@ -1,9 +1,10 @@
+//jshint esversion: 6
+
 function largestOfFour(arr) {
   // You can do this!
-  for (i=0; i<arr.length; i++){
-    arr[i] = Math.max.apply(Math, arr[i]);
-  }
-  return arr;
-}
+ return arr.map(group => group.reduce((function(prev, current) {
+   return (current > prev) ? current : prev;
+ })));
+         }
 
-console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
