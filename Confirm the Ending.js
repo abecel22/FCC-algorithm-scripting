@@ -1,12 +1,7 @@
+//jshint esversion: 6
+
 function confirmEnding(str, target) {
-
-  if (str.substr(-target.length) === target ){
-      return true;
-
-  } else {
-    return false;
-  }
-
+   return str.substring(str.length - target.length) === target; 
 }
 
-console.log(confirmEnding("Bastian", "n"));
+confirmEnding("Open sesame", "same");
