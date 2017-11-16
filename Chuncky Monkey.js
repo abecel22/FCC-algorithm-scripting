@@ -1,10 +1,13 @@
 
+//jshint esversion: 6
+
 function chunkArrayInGroups(arr, size) {
   // Break it up.
-  for (var i= 0; i< arr.length; i++){
-    splitArr = arr.slice(size, i);
+ let newArr = [];
+  for(let i = 0; i < arr.length; i += size) {
+    newArr.push(arr.slice(i, size + i));
   }
-  return splitArr;
+  return newArr;
 }
 
-console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3);
