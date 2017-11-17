@@ -1,15 +1,9 @@
-
+//jshint esversion: 6
 function mutation(arr) {
+  return arr[1].toLowerCase()
+        .split('').every(letter => {
+        return arr[0].toLowerCase().indexOf(letter) !== -1;
+  });
+}
 
- var target = arr[0].toLowerCase();
- var test = arr[1].toLowerCase();
-
- for (var i= 0; i< test.length; i++){
-   if (target.indexOf(test[i])< 0){
-     return false;
-   }
-   }
-   return true;
- }
-
-console.log(mutation(["hello", "helLo"]));
+mutation(["Alien", "line"]);
